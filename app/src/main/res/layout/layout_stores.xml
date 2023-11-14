@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolsView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_12"
+    tools:context=".ui.connexion.">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBusinessPic"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:padding="@dimen/spacing_tiny"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBusinessName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_15"
+        app:layout_constraintStart_toEndOf="@+id/ivBusinessPic"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Thalappakatti ECR" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:paddingBottom="@dimen/spacing_small"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/size_13"
+        app:layout_constraintStart_toStartOf="@+id/tvBusinessName"
+        app:layout_constraintTop_toBottomOf="@+id/tvBusinessName"
+        tools:text="Near to AGS, ECR Road, Chennai" />
+
+    <!--<androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_up_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

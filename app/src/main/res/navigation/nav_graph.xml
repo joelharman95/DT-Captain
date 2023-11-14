@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/splashFragment">
+
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment" />
+
+    <fragment
+        android:id="@+id/fragmentOrderNow"
+        android:name="com.thalappakatti.captain.ui.ordernow.OrderNowFragment"
+        android:label="@string/menu_order_now"
+        tools:layout="@layout/fragment_order_now" />
+
+    <fragment
+        android:id="@+id/fragmentUnSuccessfulOrder"
+        android:name="com.thalappakatti.captain.ui.unsuccessfulorder.UnsuccessfulOrderFragment"
+        android:label="@string/menu_unsuccessful_order"
+        tools:layout="@layout/fragment_unsuccessful_order" >
+        <action
+            android:id="@+id/action_unSuccessFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.thalappakatti.captain.ui.splash.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.thalappakatti.captain.ui.connexion.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_storeSelectionFragment"
+            app:destination="@id/storeSelectionFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_fragmentOrderNow"
+            app:destination="@id/fragmentOrderNow" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/storeSelectionFragment"
+        android:name="com.thalappakatti.captain.ui.connexion.StoreSelectionBottomSheetFragment"
+        android:label="Select your Store"
+        tools:layout="@layout/fragment_store_selection">
+        <action
+            android:id="@+id/action_storeSelectionFragment_to_fragmentOrderNow"
+            app:destination="@id/fragmentOrderNow" />
+    </dialog>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.thalappakatti.captain.ui.checkout.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+
+        <action
+            android:id="@+id/action_checkoutFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_failerFragment"
+            app:destination="@id/failerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.thalappakatti.captain.ui.checkout.SuccessFragment"
+        android:label="SuccessFragment" />
+    <fragment
+        android:id="@+id/failerFragment"
+        android:name="com.thalappakatti.captain.ui.checkout.FailerFragment"
+        android:label="FailerFragment" />
+
+</navigation>

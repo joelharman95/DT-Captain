@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.connexion.StoreSelectionBottomSheetFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_up_arrow"
+        android:tint="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:drawablePadding="@dimen/spacing_small"
+        android:gravity="center_vertical"
+        android:padding="@dimen/spacing_small"
+        android:text="@string/label_select_store"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:drawableTint="@color/red"
+        app:layout_constraintBottom_toBottomOf="@id/btnClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnClose" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnClose"
+        android:layout_width="66dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:backgroundTint="@color/black"
+        android:text="Hide"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_12"
+        app:cornerRadius="@dimen/spacing_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivArrow" />
+
+    <View
+        android:id="@+id/viewLine2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnClose" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/spacing_large"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/viewLine2"
+        tools:itemCount="3"
+        tools:listitem="@layout/layout_stores" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

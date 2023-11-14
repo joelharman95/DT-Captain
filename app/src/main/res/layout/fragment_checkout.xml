@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_small"
+    tools:context=".ui.checkout.CheckoutFragment">
+
+
+    <Button
+        android:id="@+id/check_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="check out" />
+    <Button
+        android:id="@+id/pax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pax" />
+    <Button
+        android:id="@+id/success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="success" />
+    <Button
+        android:id="@+id/failer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="failer" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

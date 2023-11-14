@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/spacing_small"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLogin"
+        style="@style/CredentialTitleTextView"
+        android:layout_marginTop="@dimen/spacing_12"
+        android:text="@string/label_table_no" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_name"
+        style="@style/LoginTextInput"
+        app:hintTextColor="@color/black"
+        android:hint="@string/label_name"
+        android:inputType="text"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+        android:imeOptions="actionNext"
+        android:maxLength="50"
+        android:paddingBottom="@dimen/spacing_normal"/>
+
+ <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_number"
+        style="@style/LoginTextInput"
+        app:hintTextColor="@color/black"
+        android:hint="@string/label_number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:imeOptions="actionNext"
+        android:paddingBottom="@dimen/spacing_normal"/>
+
+ <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_pax"
+        style="@style/LoginTextInput"
+        app:hintTextColor="@color/black"
+        android:hint="@string/label_pax"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:paddingBottom="@dimen/spacing_normal"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        style="@style/CircularButton"
+        android:text="@string/label_save"
+        android:layout_gravity="center"
+        app:cornerRadius="@dimen/spacing_medium"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
